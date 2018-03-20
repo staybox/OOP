@@ -74,6 +74,7 @@ class Car
     public $speed;
     public $destination;
     public $i = 0;
+    public $transmissionType;
     public function drive()
     {
         $path = 0;

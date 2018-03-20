@@ -74,7 +74,7 @@ class Car
     public $speed;
     public $destination;
     public $i = 0;
-    public $transmissionType;
+    //public $transmissionType;
     public function drive()
     {
         $path = 0;
@@ -102,9 +102,9 @@ class Niva extends Car
         $this->distance = $dist;
         $this->speed = $speed;
         $this->destination = $dest;
-        $this->transmissionType = $transmissionType;
+        //$this->transmissionType = $transmissionType;
 
-        if ($this->transmissionType == "manual") {
+        if ($transmissionType == "manual") {
             if ($this->speed > ($this->capacity * 2)) {
                 echo "Слишком быстро, максимальная " . $this->capacity * 2 . " скорость км" . PHP_EOL;
             } elseif ($this->destination == 1 && $this->speed < 20) {
@@ -125,7 +125,7 @@ class Niva extends Car
                 $this->drive();
                 $this->stop();
             }
-        }elseif ($this->transmissionType == "auto"){
+        }elseif ($transmissionType == "auto"){
             if ($this->speed > ($this->capacity * 2)) {
                 echo "Слишком быстро, максимальная " . $this->capacity * 2 . " скорость км" . PHP_EOL;
             } elseif ($this->destination == "drive" /*&& $this->speed < 20*/) {
